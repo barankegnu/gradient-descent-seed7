@@ -1,0 +1,68 @@
+const proc: getDataFromFile (
+                              ref   string:      configPath,
+                              inout integer:     coeffCount,
+                              inout pointArray2: pointData
+                            ) is func
+	local
+		const integer:     minCoeffCount is 2;
+		var   file:        configFile    is file.value;
+		var   pointStruct: pointBuffer   is pointStruct.value;
+	begin
+		block
+			configFile := open(configPath, "r");
+			if configFile = STD_NULL then
+				write("\n\tGET_DATA_FROM_FILE::CONFIG_FILE::STD_NULL\n\n");
+				exit(PROGRAM);
+			end if;
+		exception
+			catch MEMORY_ERROR:
+				write("\n\tGET_DATA_FROM_FILE::OPEN::MEMORY_ERROR\n\n");
+				exit(PROGRAM);
+			catch RANGE_ERROR:
+				write("\n\tGET_DATA_FROM_FILE::OPEN::RANGE_ERROR\n\n");
+				exit(PROGRAM);
+		end block;
+		block
+			coeffCount := integer(getwd(configFile));
+			if coeffCount < minCoeffCount then
+				write("\n\tGET_DATA_FROM_FILE::COEFF_COUNT::MINCC\n\n");
+				exit(PROGRAM);
+			end if;
+			if configFile.bufferChar <> '\n' then
+				write("\n\tGET_DATA_FROM_FILE::COEFF_COUNT::ENTER\n\n");
+				exit(PROGRAM);
+			end if;
+			while hasNext(configFile) = TRUE do
+				pointBuffer.X := float(getwd(configFile));
+				if configFile.bufferChar <> ' '  and
+				   configFile.bufferChar <> '\t' then
+					write("\n\tGET_DATA_FROM_FILE::POINT_BUFFER::SPACE_TAB\n\n");
+					exit(PROGRAM);
+				end if;
+				pointBuffer.Y := float(getwd(configFile));
+				if configFile.bufferChar <> '\n' and
+				   configFile.bufferChar <> EOF  then
+					write("\n\tGET_DATA_FROM_FILE::POINT_BUFFER::ENTER_EOF\n\n");
+					exit(PROGRAM);
+				end if;
+				pointData &:= pointBuffer;
+			end while;
+		exception
+			catch RANGE_ERROR:
+				write("\n\tGET_DATA_FROM_FILE::NUMBER::RANGE_ERROR\n\n");
+				exit(PROGRAM);
+			catch MEMORY_ERROR:
+				write("\n\tGET_DATA_FROM_FILE::GETWD::MEMORY_ERROR\n\n");
+				exit(PROGRAM);
+			catch FILE_ERROR:
+				write("\n\tGET_DATA_FROM_FILE::GETWD::FILE_ERROR\n\n");
+				exit(PROGRAM);
+		end block;
+		block
+			close(configFile);
+		exception
+			catch FILE_ERROR:
+				write("\n\tGET_DATA_FROM_FILE::CLOSE::FILE_ERROR\n\n");
+				exit(PROGRAM);
+		end block;
+	end func;

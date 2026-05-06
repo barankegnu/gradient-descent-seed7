@@ -1,0 +1,8 @@
+include "float.s7i";
+
+const type: pointStruct is new struct
+		var float: X is float.value;
+		var float: Y is float.value;
+	end struct;
+
+const type: pointArray2 is array pointStruct;
