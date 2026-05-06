@@ -16,6 +16,7 @@ You can use scripts:
 2) For compiling (in src/):
 	a) Release - "s7c.sh";
 	b) Debug - "s7c_dbg.sh".
+
 If you don't want to build and compile Seed7 project,
 you can use debug-bin "grd_desc" in bin/ (gcc/x86-64).
 (Maybe you'll need to use "chmod +x")
