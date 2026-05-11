@@ -1,6 +1,1 @@
-include "pointArray2.s7i";
-include "parseArgv.s7i";
-include "getDataFromFile.s7i";
-include "sortPoint.s7i";
-include "parseData.s7i";
-include "removeDuplicate.s7i";
+include "preparForCalcul/nstdlibs.s7i";

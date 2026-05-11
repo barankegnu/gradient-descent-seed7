@@ -29,11 +29,10 @@ you can use debug-bin "grad_desc" in bin/ (gcc/x86-64).
 3) Sorting points (by X coordinate with quick sort);
 4) Parsing data of sorted points (for uncorrect input);
 5) Removing duplicates of parsed data (for correct calculations).
-### Argument of program - path to config (e.g. config.txt in src/).
+### Argument of program - path to config (e.g. config.txt in src/ or bin/).
 
 ## TODO for version 0.2
 
 1) Working on creating config file for calculations (or not if it will be unused),
    that will contain step size and other parameters;
 2) Translating solution of a linear system to code and so on.
-

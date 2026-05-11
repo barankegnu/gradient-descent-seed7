@@ -27667,7 +27667,7 @@ if (profile[2711].depth == 0) {
 /* line 1 "no_file" */
 
 /* 1189 */
-/* line 3 "parseArgv.s7i" */
+/* line 3 "preparForCalcul/parseArgv.s7i" */
 static void/*t_2_void*/ o_2714_parseArgv (const const_arrayType/*t_33_TEST_3*/ o_2715_arg)
 {
 profile[2714].count++;
@@ -27675,80 +27675,80 @@ if (profile[2714].depth == 0) {
   profile[2714].time -= timMicroSec();
 }
 profile[2714].depth++;
-/* line 7 "parseArgv.s7i" */
+/* line 7 "preparForCalcul/parseArgv.s7i" */
 if ((((o_2715_arg)->max_position - (o_2715_arg)->min_position + 1)) != (1L)) {
-/* line 8 "parseArgv.s7i" */
+/* line 8 "preparForCalcul/parseArgv.s7i" */
 o_1479_write(&str[35] /* "\n\tPARSE_ARGV::LENGTH::ONE\n\n" */);
-/* line 9 "parseArgv.s7i" */
+/* line 9 "preparForCalcul/parseArgv.s7i" */
 o_1038_PROGRAM();
 }
-/* line 12 "parseArgv.s7i" */
+/* line 12 "preparForCalcul/parseArgv.s7i" */
 {
-/* line 12 "parseArgv.s7i" */
+/* line 12 "preparForCalcul/parseArgv.s7i" */
 int fail_value;
-/* line 12 "parseArgv.s7i" */
+/* line 12 "preparForCalcul/parseArgv.s7i" */
 catch_stack_pos++;
-/* line 12 "parseArgv.s7i" */
+/* line 12 "preparForCalcul/parseArgv.s7i" */
 if (unlikely(catch_stack_pos >= max_catch_stack)) {
-/* line 12 "parseArgv.s7i" */
+/* line 12 "preparForCalcul/parseArgv.s7i" */
   resize_catch_stack();
-/* line 12 "parseArgv.s7i" */
+/* line 12 "preparForCalcul/parseArgv.s7i" */
 }
-/* line 12 "parseArgv.s7i" */
+/* line 12 "preparForCalcul/parseArgv.s7i" */
 if (likely((fail_value = do_setjmp(catch_stack[catch_stack_pos])) == 0)) {
-/* line 12 "parseArgv.s7i" */
+/* line 12 "preparForCalcul/parseArgv.s7i" */
 if ((cmdFileType((o_2715_arg)->arr[(idxChk(1L<(o_2715_arg)->min_position || 1L>(o_2715_arg)->max_position) ? intRaiseError(INDEX_ERROR) : 1L-(o_2715_arg)->min_position)].value.striValue)) == (0L)) {
-/* line 13 "parseArgv.s7i" */
+/* line 13 "preparForCalcul/parseArgv.s7i" */
 o_1479_write(&str[36] /* "\n\tPARSE_ARGV::FILE_TYPE::FILE_ABSENT\n\n" */);
-/* line 14 "parseArgv.s7i" */
+/* line 14 "preparForCalcul/parseArgv.s7i" */
 o_1038_PROGRAM();
 }
-/* line 16 "parseArgv.s7i" */
+/* line 16 "preparForCalcul/parseArgv.s7i" */
 if ((cmdFileType((o_2715_arg)->arr[(idxChk(1L<(o_2715_arg)->min_position || 1L>(o_2715_arg)->max_position) ? intRaiseError(INDEX_ERROR) : 1L-(o_2715_arg)->min_position)].value.striValue)) != (2L)) {
-/* line 17 "parseArgv.s7i" */
+/* line 17 "preparForCalcul/parseArgv.s7i" */
 o_1479_write(&str[37] /* "\n\tPARSE_ARGV::FILE_TYPE::FILE_REGULAR\n\n" */);
-/* line 18 "parseArgv.s7i" */
+/* line 18 "preparForCalcul/parseArgv.s7i" */
 o_1038_PROGRAM();
 }
-/* line 18 "parseArgv.s7i" */
+/* line 18 "preparForCalcul/parseArgv.s7i" */
 catch_stack_pos--;
-/* line 21 "parseArgv.s7i" */
+/* line 21 "preparForCalcul/parseArgv.s7i" */
 } else {
-/* line 18 "parseArgv.s7i" */
+/* line 18 "preparForCalcul/parseArgv.s7i" */
 resetExceptionCheck();
-/* line 18 "parseArgv.s7i" */
+/* line 18 "preparForCalcul/parseArgv.s7i" */
 catch_stack_pos--;
-/* line 21 "parseArgv.s7i" */
+/* line 21 "preparForCalcul/parseArgv.s7i" */
 if (o_12_MEMORY_ERROR == fail_value) {
-/* line 22 "parseArgv.s7i" */
+/* line 22 "preparForCalcul/parseArgv.s7i" */
 o_1479_write(&str[38] /* "\n\tPARSE_ARGV::FILE_TYPE::MEMORY_ERROR\n\n" */);
-/* line 23 "parseArgv.s7i" */
+/* line 23 "preparForCalcul/parseArgv.s7i" */
 o_1038_PROGRAM();
-/* line 21 "parseArgv.s7i" */
+/* line 21 "preparForCalcul/parseArgv.s7i" */
 } else
-/* line 24 "parseArgv.s7i" */
+/* line 24 "preparForCalcul/parseArgv.s7i" */
 if (o_16_RANGE_ERROR == fail_value) {
-/* line 25 "parseArgv.s7i" */
+/* line 25 "preparForCalcul/parseArgv.s7i" */
 o_1479_write(&str[39] /* "\n\tPARSE_ARGV::FILE_TYPE::RANGE_ERROR\n\n" */);
-/* line 26 "parseArgv.s7i" */
+/* line 26 "preparForCalcul/parseArgv.s7i" */
 o_1038_PROGRAM();
-/* line 24 "parseArgv.s7i" */
+/* line 24 "preparForCalcul/parseArgv.s7i" */
 } else
-/* line 27 "parseArgv.s7i" */
+/* line 27 "preparForCalcul/parseArgv.s7i" */
 if (o_18_FILE_ERROR == fail_value) {
-/* line 28 "parseArgv.s7i" */
+/* line 28 "preparForCalcul/parseArgv.s7i" */
 o_1479_write(&str[40] /* "\n\tPARSE_ARGV::FILE_TYPE::FILE_ERROR\n\n" */);
-/* line 29 "parseArgv.s7i" */
+/* line 29 "preparForCalcul/parseArgv.s7i" */
 o_1038_PROGRAM();
-/* line 30 "parseArgv.s7i" */
+/* line 30 "preparForCalcul/parseArgv.s7i" */
 } else {
-/* line 30 "parseArgv.s7i" */
+/* line 30 "preparForCalcul/parseArgv.s7i" */
   rtlRaiseError(fail_value, error_file, error_line);
-/* line 30 "parseArgv.s7i" */
+/* line 30 "preparForCalcul/parseArgv.s7i" */
 }
-/* line 30 "parseArgv.s7i" */
+/* line 30 "preparForCalcul/parseArgv.s7i" */
 }
-/* line 30 "parseArgv.s7i" */
+/* line 30 "preparForCalcul/parseArgv.s7i" */
 }
 profile[2714].depth--;
 if (profile[2714].depth == 0) {
@@ -27758,251 +27758,251 @@ if (profile[2714].depth == 0) {
 /* line 1 "no_file" */
 
 /* 1190 */
-/* line 1 "getDataFromFile.s7i" */
+/* line 1 "preparForCalcul/getDataFromFile.s7i" */
 static void/*t_2_void*/ o_2716_getDataFromFile (const const_striType/*t_19_string*/ o_2717_configPath, intType/*t_18_integer*/ *const o_2718_coeffCount, arrayType/*t_62_pointArray2*/ *const o_2719_pointData)
 {
-/* line 8 "getDataFromFile.s7i" */
+/* line 8 "preparForCalcul/getDataFromFile.s7i" */
 interfaceType/*t_53_file*/ o_2720_configFile;
-/* line 9 "getDataFromFile.s7i" */
+/* line 9 "preparForCalcul/getDataFromFile.s7i" */
 structType/*t_61_pointStruct*/ o_2721_pointBuffer;
 profile[2716].count++;
 if (profile[2716].depth == 0) {
   profile[2716].time -= timMicroSec();
 }
 profile[2716].depth++;
-/* line 8 "getDataFromFile.s7i" */
+/* line 8 "preparForCalcul/getDataFromFile.s7i" */
 o_2720_configFile=itfCreate(o_1138_STD_NULL/* STRUCTOBJECT */);
-/* line 9 "getDataFromFile.s7i" */
+/* line 9 "preparForCalcul/getDataFromFile.s7i" */
 o_2721_pointBuffer=create_61(sct[37]);
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
 {
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
 int fail_value;
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
 catch_stack_pos++;
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
 if (unlikely(catch_stack_pos >= max_catch_stack)) {
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
   resize_catch_stack();
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
 if (likely((fail_value = do_setjmp(catch_stack[catch_stack_pos])) == 0)) {
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
 {
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
 interfaceType new_interface;
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
 new_interface=o_1200_open(o_2717_configPath, &str[16] /* "r" */);
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
 destr_53(o_2720_configFile);
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
 o_2720_configFile=new_interface;
-/* line 12 "getDataFromFile.s7i" */
+/* line 12 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 13 "getDataFromFile.s7i" */
+/* line 13 "preparForCalcul/getDataFromFile.s7i" */
 if ((o_2720_configFile) == (o_1138_STD_NULL)) {
-/* line 14 "getDataFromFile.s7i" */
+/* line 14 "preparForCalcul/getDataFromFile.s7i" */
 o_1479_write(&str[41] /* "\n\tGET_DATA_FROM_FILE::CONFIG_FILE::STD_NULL\n\n" */);
-/* line 15 "getDataFromFile.s7i" */
+/* line 15 "preparForCalcul/getDataFromFile.s7i" */
 o_1038_PROGRAM();
 }
-/* line 15 "getDataFromFile.s7i" */
+/* line 15 "preparForCalcul/getDataFromFile.s7i" */
 catch_stack_pos--;
-/* line 18 "getDataFromFile.s7i" */
+/* line 18 "preparForCalcul/getDataFromFile.s7i" */
 } else {
-/* line 15 "getDataFromFile.s7i" */
+/* line 15 "preparForCalcul/getDataFromFile.s7i" */
 resetExceptionCheck();
-/* line 15 "getDataFromFile.s7i" */
+/* line 15 "preparForCalcul/getDataFromFile.s7i" */
 catch_stack_pos--;
-/* line 18 "getDataFromFile.s7i" */
+/* line 18 "preparForCalcul/getDataFromFile.s7i" */
 if (o_12_MEMORY_ERROR == fail_value) {
-/* line 19 "getDataFromFile.s7i" */
+/* line 19 "preparForCalcul/getDataFromFile.s7i" */
 o_1479_write(&str[42] /* "\n\tGET_DATA_FROM_FILE::OPEN::MEMORY_ERROR\n\n" */);
-/* line 20 "getDataFromFile.s7i" */
+/* line 20 "preparForCalcul/getDataFromFile.s7i" */
 o_1038_PROGRAM();
-/* line 18 "getDataFromFile.s7i" */
+/* line 18 "preparForCalcul/getDataFromFile.s7i" */
 } else
-/* line 21 "getDataFromFile.s7i" */
+/* line 21 "preparForCalcul/getDataFromFile.s7i" */
 if (o_16_RANGE_ERROR == fail_value) {
-/* line 22 "getDataFromFile.s7i" */
+/* line 22 "preparForCalcul/getDataFromFile.s7i" */
 o_1479_write(&str[43] /* "\n\tGET_DATA_FROM_FILE::OPEN::RANGE_ERROR\n\n" */);
-/* line 23 "getDataFromFile.s7i" */
+/* line 23 "preparForCalcul/getDataFromFile.s7i" */
 o_1038_PROGRAM();
-/* line 24 "getDataFromFile.s7i" */
+/* line 24 "preparForCalcul/getDataFromFile.s7i" */
 } else {
-/* line 24 "getDataFromFile.s7i" */
+/* line 24 "preparForCalcul/getDataFromFile.s7i" */
   rtlRaiseError(fail_value, error_file, error_line);
-/* line 24 "getDataFromFile.s7i" */
+/* line 24 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 24 "getDataFromFile.s7i" */
+/* line 24 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 24 "getDataFromFile.s7i" */
+/* line 24 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 26 "getDataFromFile.s7i" */
+/* line 26 "preparForCalcul/getDataFromFile.s7i" */
 {
-/* line 26 "getDataFromFile.s7i" */
+/* line 26 "preparForCalcul/getDataFromFile.s7i" */
 int fail_value;
-/* line 26 "getDataFromFile.s7i" */
+/* line 26 "preparForCalcul/getDataFromFile.s7i" */
 catch_stack_pos++;
-/* line 26 "getDataFromFile.s7i" */
+/* line 26 "preparForCalcul/getDataFromFile.s7i" */
 if (unlikely(catch_stack_pos >= max_catch_stack)) {
-/* line 26 "getDataFromFile.s7i" */
+/* line 26 "preparForCalcul/getDataFromFile.s7i" */
   resize_catch_stack();
-/* line 26 "getDataFromFile.s7i" */
+/* line 26 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 26 "getDataFromFile.s7i" */
+/* line 26 "preparForCalcul/getDataFromFile.s7i" */
 if (likely((fail_value = do_setjmp(catch_stack[catch_stack_pos])) == 0)) {
-/* line 26 "getDataFromFile.s7i" */
+/* line 26 "preparForCalcul/getDataFromFile.s7i" */
 {
-/* line 26 "getDataFromFile.s7i" */
+/* line 26 "preparForCalcul/getDataFromFile.s7i" */
 striType/*t_19_string*/ tmp_1 = (striType/*t_19_string*/)(NULL);
-/* line 26 "getDataFromFile.s7i" */
+/* line 26 "preparForCalcul/getDataFromFile.s7i" */
 *o_2718_coeffCount=intParse((tmp_1=(striType/*t_19_string*/)(o_1075_getwd(&(o_2720_configFile)))));
-/* line 26 "getDataFromFile.s7i" */
+/* line 26 "preparForCalcul/getDataFromFile.s7i" */
 strDestr(tmp_1);
-/* line 26 "getDataFromFile.s7i" */
+/* line 26 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 27 "getDataFromFile.s7i" */
+/* line 27 "preparForCalcul/getDataFromFile.s7i" */
 if ((*o_2718_coeffCount) < (2L)) {
-/* line 28 "getDataFromFile.s7i" */
+/* line 28 "preparForCalcul/getDataFromFile.s7i" */
 o_1479_write(&str[44] /* "\n\tGET_DATA_FROM_FILE::COEFF_COUNT::MINCC\n\n" */);
-/* line 29 "getDataFromFile.s7i" */
+/* line 29 "preparForCalcul/getDataFromFile.s7i" */
 o_1038_PROGRAM();
 }
-/* line 31 "getDataFromFile.s7i" */
+/* line 31 "preparForCalcul/getDataFromFile.s7i" */
 if ((*o_1103/*.*/(&(o_2720_configFile))) != ((charType) '\n')) {
-/* line 32 "getDataFromFile.s7i" */
+/* line 32 "preparForCalcul/getDataFromFile.s7i" */
 o_1479_write(&str[45] /* "\n\tGET_DATA_FROM_FILE::COEFF_COUNT::ENTER\n\n" */);
-/* line 33 "getDataFromFile.s7i" */
+/* line 33 "preparForCalcul/getDataFromFile.s7i" */
 o_1038_PROGRAM();
 }
-/* line 35 "getDataFromFile.s7i" */
+/* line 35 "preparForCalcul/getDataFromFile.s7i" */
 while ((o_1085_hasNext(&(o_2720_configFile))) == (o_29_TRUE)) {
-/* line 36 "getDataFromFile.s7i" */
+/* line 36 "preparForCalcul/getDataFromFile.s7i" */
 {
-/* line 36 "getDataFromFile.s7i" */
+/* line 36 "preparForCalcul/getDataFromFile.s7i" */
 striType/*t_19_string*/ tmp_2 = (striType/*t_19_string*/)(NULL);
-/* line 36 "getDataFromFile.s7i" */
+/* line 36 "preparForCalcul/getDataFromFile.s7i" */
 ((structType)(o_2721_pointBuffer))->stru[0].value.floatValue/*->o_0_X*/=fltParse((tmp_2=(striType/*t_19_string*/)(o_1075_getwd(&(o_2720_configFile)))));
-/* line 36 "getDataFromFile.s7i" */
+/* line 36 "preparForCalcul/getDataFromFile.s7i" */
 strDestr(tmp_2);
-/* line 36 "getDataFromFile.s7i" */
+/* line 36 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 37 "getDataFromFile.s7i" */
+/* line 37 "preparForCalcul/getDataFromFile.s7i" */
 if (((*o_1103/*.*/(&(o_2720_configFile))) != ((charType) ' ')) &&
-/* line 38 "getDataFromFile.s7i" */
+/* line 38 "preparForCalcul/getDataFromFile.s7i" */
 ((*o_1103/*.*/(&(o_2720_configFile))) != ((charType) '\t'))) {
-/* line 39 "getDataFromFile.s7i" */
+/* line 39 "preparForCalcul/getDataFromFile.s7i" */
 o_1479_write(&str[46] /* "\n\tGET_DATA_FROM_FILE::POINT_BUFFER::SPACE_TAB\n\n" */);
-/* line 40 "getDataFromFile.s7i" */
+/* line 40 "preparForCalcul/getDataFromFile.s7i" */
 o_1038_PROGRAM();
 }
-/* line 42 "getDataFromFile.s7i" */
+/* line 42 "preparForCalcul/getDataFromFile.s7i" */
 {
-/* line 42 "getDataFromFile.s7i" */
+/* line 42 "preparForCalcul/getDataFromFile.s7i" */
 striType/*t_19_string*/ tmp_3 = (striType/*t_19_string*/)(NULL);
-/* line 42 "getDataFromFile.s7i" */
+/* line 42 "preparForCalcul/getDataFromFile.s7i" */
 ((structType)(o_2721_pointBuffer))->stru[1].value.floatValue/*->o_0_Y*/=fltParse((tmp_3=(striType/*t_19_string*/)(o_1075_getwd(&(o_2720_configFile)))));
-/* line 42 "getDataFromFile.s7i" */
+/* line 42 "preparForCalcul/getDataFromFile.s7i" */
 strDestr(tmp_3);
-/* line 42 "getDataFromFile.s7i" */
+/* line 42 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 43 "getDataFromFile.s7i" */
+/* line 43 "preparForCalcul/getDataFromFile.s7i" */
 if (((*o_1103/*.*/(&(o_2720_configFile))) != ((charType) '\n')) &&
-/* line 44 "getDataFromFile.s7i" */
+/* line 44 "preparForCalcul/getDataFromFile.s7i" */
 ((*o_1103/*.*/(&(o_2720_configFile))) != ((charType) 4294967295))) {
-/* line 45 "getDataFromFile.s7i" */
+/* line 45 "preparForCalcul/getDataFromFile.s7i" */
 o_1479_write(&str[47] /* "\n\tGET_DATA_FROM_FILE::POINT_BUFFER::ENTER_EOF\n\n" */);
-/* line 46 "getDataFromFile.s7i" */
+/* line 46 "preparForCalcul/getDataFromFile.s7i" */
 o_1038_PROGRAM();
 }
-/* line 48 "getDataFromFile.s7i" */
+/* line 48 "preparForCalcul/getDataFromFile.s7i" */
 arrPush(&(*o_2719_pointData), (genericType)(create_61(o_2721_pointBuffer)));
 }
-/* line 48 "getDataFromFile.s7i" */
+/* line 48 "preparForCalcul/getDataFromFile.s7i" */
 catch_stack_pos--;
-/* line 51 "getDataFromFile.s7i" */
+/* line 51 "preparForCalcul/getDataFromFile.s7i" */
 } else {
-/* line 48 "getDataFromFile.s7i" */
+/* line 48 "preparForCalcul/getDataFromFile.s7i" */
 resetExceptionCheck();
-/* line 48 "getDataFromFile.s7i" */
+/* line 48 "preparForCalcul/getDataFromFile.s7i" */
 catch_stack_pos--;
-/* line 51 "getDataFromFile.s7i" */
+/* line 51 "preparForCalcul/getDataFromFile.s7i" */
 if (o_16_RANGE_ERROR == fail_value) {
-/* line 52 "getDataFromFile.s7i" */
+/* line 52 "preparForCalcul/getDataFromFile.s7i" */
 o_1479_write(&str[48] /* "\n\tGET_DATA_FROM_FILE::NUMBER::RANGE_ERROR\n\n" */);
-/* line 53 "getDataFromFile.s7i" */
+/* line 53 "preparForCalcul/getDataFromFile.s7i" */
 o_1038_PROGRAM();
-/* line 51 "getDataFromFile.s7i" */
+/* line 51 "preparForCalcul/getDataFromFile.s7i" */
 } else
-/* line 54 "getDataFromFile.s7i" */
+/* line 54 "preparForCalcul/getDataFromFile.s7i" */
 if (o_12_MEMORY_ERROR == fail_value) {
-/* line 55 "getDataFromFile.s7i" */
+/* line 55 "preparForCalcul/getDataFromFile.s7i" */
 o_1479_write(&str[49] /* "\n\tGET_DATA_FROM_FILE::GETWD::MEMORY_ERROR\n\n" */);
-/* line 56 "getDataFromFile.s7i" */
+/* line 56 "preparForCalcul/getDataFromFile.s7i" */
 o_1038_PROGRAM();
-/* line 54 "getDataFromFile.s7i" */
+/* line 54 "preparForCalcul/getDataFromFile.s7i" */
 } else
-/* line 57 "getDataFromFile.s7i" */
+/* line 57 "preparForCalcul/getDataFromFile.s7i" */
 if (o_18_FILE_ERROR == fail_value) {
-/* line 58 "getDataFromFile.s7i" */
+/* line 58 "preparForCalcul/getDataFromFile.s7i" */
 o_1479_write(&str[50] /* "\n\tGET_DATA_FROM_FILE::GETWD::FILE_ERROR\n\n" */);
-/* line 59 "getDataFromFile.s7i" */
+/* line 59 "preparForCalcul/getDataFromFile.s7i" */
 o_1038_PROGRAM();
-/* line 60 "getDataFromFile.s7i" */
+/* line 60 "preparForCalcul/getDataFromFile.s7i" */
 } else {
-/* line 60 "getDataFromFile.s7i" */
+/* line 60 "preparForCalcul/getDataFromFile.s7i" */
   rtlRaiseError(fail_value, error_file, error_line);
-/* line 60 "getDataFromFile.s7i" */
+/* line 60 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 60 "getDataFromFile.s7i" */
+/* line 60 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 60 "getDataFromFile.s7i" */
+/* line 60 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 62 "getDataFromFile.s7i" */
+/* line 62 "preparForCalcul/getDataFromFile.s7i" */
 {
-/* line 62 "getDataFromFile.s7i" */
+/* line 62 "preparForCalcul/getDataFromFile.s7i" */
 int fail_value;
-/* line 62 "getDataFromFile.s7i" */
+/* line 62 "preparForCalcul/getDataFromFile.s7i" */
 catch_stack_pos++;
-/* line 62 "getDataFromFile.s7i" */
+/* line 62 "preparForCalcul/getDataFromFile.s7i" */
 if (unlikely(catch_stack_pos >= max_catch_stack)) {
-/* line 62 "getDataFromFile.s7i" */
+/* line 62 "preparForCalcul/getDataFromFile.s7i" */
   resize_catch_stack();
-/* line 62 "getDataFromFile.s7i" */
+/* line 62 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 62 "getDataFromFile.s7i" */
+/* line 62 "preparForCalcul/getDataFromFile.s7i" */
 if (likely((fail_value = do_setjmp(catch_stack[catch_stack_pos])) == 0)) {
-/* line 62 "getDataFromFile.s7i" */
+/* line 62 "preparForCalcul/getDataFromFile.s7i" */
 o_1063_close(&(o_2720_configFile));
-/* line 62 "getDataFromFile.s7i" */
+/* line 62 "preparForCalcul/getDataFromFile.s7i" */
 catch_stack_pos--;
-/* line 64 "getDataFromFile.s7i" */
+/* line 64 "preparForCalcul/getDataFromFile.s7i" */
 } else {
-/* line 62 "getDataFromFile.s7i" */
+/* line 62 "preparForCalcul/getDataFromFile.s7i" */
 resetExceptionCheck();
-/* line 62 "getDataFromFile.s7i" */
+/* line 62 "preparForCalcul/getDataFromFile.s7i" */
 catch_stack_pos--;
-/* line 64 "getDataFromFile.s7i" */
+/* line 64 "preparForCalcul/getDataFromFile.s7i" */
 if (o_18_FILE_ERROR == fail_value) {
-/* line 65 "getDataFromFile.s7i" */
+/* line 65 "preparForCalcul/getDataFromFile.s7i" */
 o_1479_write(&str[51] /* "\n\tGET_DATA_FROM_FILE::CLOSE::FILE_ERROR\n\n" */);
-/* line 66 "getDataFromFile.s7i" */
+/* line 66 "preparForCalcul/getDataFromFile.s7i" */
 o_1038_PROGRAM();
-/* line 67 "getDataFromFile.s7i" */
+/* line 67 "preparForCalcul/getDataFromFile.s7i" */
 } else {
-/* line 67 "getDataFromFile.s7i" */
+/* line 67 "preparForCalcul/getDataFromFile.s7i" */
   rtlRaiseError(fail_value, error_file, error_line);
-/* line 67 "getDataFromFile.s7i" */
+/* line 67 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 67 "getDataFromFile.s7i" */
+/* line 67 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 67 "getDataFromFile.s7i" */
+/* line 67 "preparForCalcul/getDataFromFile.s7i" */
 }
-/* line 1 "getDataFromFile.s7i" */
+/* line 1 "preparForCalcul/getDataFromFile.s7i" */
 destr_53(o_2720_configFile);
-/* line 1 "getDataFromFile.s7i" */
+/* line 1 "preparForCalcul/getDataFromFile.s7i" */
 destr_61(o_2721_pointBuffer);
 profile[2716].depth--;
 if (profile[2716].depth == 0) {
@@ -28026,131 +28026,131 @@ a->stru[1].value.floatValue=b->stru[1].value.floatValue;
 
 static void/*t_2_void*/ o_2722_sortPoint (arrayType/*t_62_pointArray2*/ *const o_2723_arr, const intType/*t_18_integer*/ o_2724_left, const intType/*t_18_integer*/ o_2725_right);
 
-/* line 7 "sortPoint.s7i" */
+/* line 7 "preparForCalcul/sortPoint.s7i" */
 static void/*t_2_void*/ o_2722_sortPoint (arrayType/*t_62_pointArray2*/ *const o_2723_arr, const intType/*t_18_integer*/ o_2724_left, const intType/*t_18_integer*/ o_2725_right)
 {
-/* line 13 "sortPoint.s7i" */
+/* line 13 "preparForCalcul/sortPoint.s7i" */
 structType/*t_61_pointStruct*/ o_2726_compare_elem;
-/* line 14 "sortPoint.s7i" */
+/* line 14 "preparForCalcul/sortPoint.s7i" */
 intType/*t_18_integer*/ o_2727_less_idx=0L;
-/* line 15 "sortPoint.s7i" */
+/* line 15 "preparForCalcul/sortPoint.s7i" */
 intType/*t_18_integer*/ o_2728_greater_idx=0L;
-/* line 16 "sortPoint.s7i" */
+/* line 16 "preparForCalcul/sortPoint.s7i" */
 structType/*t_61_pointStruct*/ o_2729_help;
 profile[2722].count++;
 if (profile[2722].depth == 0) {
   profile[2722].time -= timMicroSec();
 }
 profile[2722].depth++;
-/* line 13 "sortPoint.s7i" */
+/* line 13 "preparForCalcul/sortPoint.s7i" */
 o_2726_compare_elem=create_61(sct[38]);
-/* line 16 "sortPoint.s7i" */
+/* line 16 "preparForCalcul/sortPoint.s7i" */
 o_2729_help=create_61(sct[39]);
-/* line 18 "sortPoint.s7i" */
+/* line 18 "preparForCalcul/sortPoint.s7i" */
 if ((o_2725_right) > (o_2724_left)) {
-/* line 19 "sortPoint.s7i" */
+/* line 19 "preparForCalcul/sortPoint.s7i" */
 {
-/* line 19 "sortPoint.s7i" */
+/* line 19 "preparForCalcul/sortPoint.s7i" */
 uintType idx_1;
-/* line 19 "sortPoint.s7i" */
+/* line 19 "preparForCalcul/sortPoint.s7i" */
 cpy_61((structType/*t_61_pointStruct*/)(o_2726_compare_elem), (structType/*t_61_pointStruct*/)((*o_2723_arr)->arr[(idx_1 = (uintType)(o_2725_right)-(uintType)((*o_2723_arr)->min_position),idxChk(idx_1 >= (uintType)((*o_2723_arr)->max_position) - (uintType)((*o_2723_arr)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_1)].value.structValue));
-/* line 19 "sortPoint.s7i" */
+/* line 19 "preparForCalcul/sortPoint.s7i" */
 }
-/* line 20 "sortPoint.s7i" */
+/* line 20 "preparForCalcul/sortPoint.s7i" */
 o_2727_less_idx=(ovfChk(o_2724_left==(-9223372036854775807L-1L))?intRaiseError(OVERFLOW_ERROR):o_2724_left - 1L);
-/* line 21 "sortPoint.s7i" */
+/* line 21 "preparForCalcul/sortPoint.s7i" */
 o_2728_greater_idx=o_2725_right;
-/* line 23 "sortPoint.s7i" */
+/* line 23 "preparForCalcul/sortPoint.s7i" */
 do {
 {
-/* line 24 "sortPoint.s7i" */
+/* line 24 "preparForCalcul/sortPoint.s7i" */
 uintType idx_1;
-/* line 24 "sortPoint.s7i" */
+/* line 24 "preparForCalcul/sortPoint.s7i" */
 do {
-/* line 24 "sortPoint.s7i" */
+/* line 24 "preparForCalcul/sortPoint.s7i" */
 if (ovfChk(o_2727_less_idx==9223372036854775807L)) {raiseError(OVERFLOW_ERROR);
-/* line 24 "sortPoint.s7i" */
+/* line 24 "preparForCalcul/sortPoint.s7i" */
 } else ++(o_2727_less_idx);
-/* line 25 "sortPoint.s7i" */
+/* line 25 "preparForCalcul/sortPoint.s7i" */
 } while (!((((structType)((*o_2723_arr)->arr[(idx_1 = (uintType)(o_2727_less_idx)-(uintType)((*o_2723_arr)->min_position),idxChk(idx_1 >= (uintType)((*o_2723_arr)->max_position) - (uintType)((*o_2723_arr)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_1)].value.structValue))->stru[0].value.floatValue/*->o_0_X*/) >= (((structType)(o_2726_compare_elem))->stru[0].value.floatValue/*->o_0_X*/)));
 }
 {
-/* line 27 "sortPoint.s7i" */
+/* line 27 "preparForCalcul/sortPoint.s7i" */
 uintType idx_2;
-/* line 27 "sortPoint.s7i" */
+/* line 27 "preparForCalcul/sortPoint.s7i" */
 do {
-/* line 27 "sortPoint.s7i" */
+/* line 27 "preparForCalcul/sortPoint.s7i" */
 if (ovfChk(o_2728_greater_idx==(-9223372036854775807L-1L))) {raiseError(OVERFLOW_ERROR);
-/* line 27 "sortPoint.s7i" */
+/* line 27 "preparForCalcul/sortPoint.s7i" */
 } else --(o_2728_greater_idx);
-/* line 28 "sortPoint.s7i" */
+/* line 28 "preparForCalcul/sortPoint.s7i" */
 } while (!(((((structType)((*o_2723_arr)->arr[(idx_2 = (uintType)(o_2728_greater_idx)-(uintType)((*o_2723_arr)->min_position),idxChk(idx_2 >= (uintType)((*o_2723_arr)->max_position) - (uintType)((*o_2723_arr)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_2)].value.structValue))->stru[0].value.floatValue/*->o_0_X*/) <= (((structType)(o_2726_compare_elem))->stru[0].value.floatValue/*->o_0_X*/)) ||
-/* line 28 "sortPoint.s7i" */
+/* line 28 "preparForCalcul/sortPoint.s7i" */
 ((o_2728_greater_idx) == (o_2724_left))));
 }
-/* line 29 "sortPoint.s7i" */
+/* line 29 "preparForCalcul/sortPoint.s7i" */
 if ((o_2727_less_idx) < (o_2728_greater_idx)) {
-/* line 30 "sortPoint.s7i" */
+/* line 30 "preparForCalcul/sortPoint.s7i" */
 {
-/* line 30 "sortPoint.s7i" */
+/* line 30 "preparForCalcul/sortPoint.s7i" */
 uintType idx_1;
-/* line 30 "sortPoint.s7i" */
+/* line 30 "preparForCalcul/sortPoint.s7i" */
 cpy_61((structType/*t_61_pointStruct*/)(o_2729_help), (structType/*t_61_pointStruct*/)((*o_2723_arr)->arr[(idx_1 = (uintType)(o_2727_less_idx)-(uintType)((*o_2723_arr)->min_position),idxChk(idx_1 >= (uintType)((*o_2723_arr)->max_position) - (uintType)((*o_2723_arr)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_1)].value.structValue));
-/* line 30 "sortPoint.s7i" */
+/* line 30 "preparForCalcul/sortPoint.s7i" */
 }
-/* line 31 "sortPoint.s7i" */
+/* line 31 "preparForCalcul/sortPoint.s7i" */
 {
-/* line 31 "sortPoint.s7i" */
+/* line 31 "preparForCalcul/sortPoint.s7i" */
 uintType idx_1;
-/* line 31 "sortPoint.s7i" */
+/* line 31 "preparForCalcul/sortPoint.s7i" */
 uintType idx_2;
-/* line 31 "sortPoint.s7i" */
+/* line 31 "preparForCalcul/sortPoint.s7i" */
 cpy_61((structType/*t_61_pointStruct*/)((*o_2723_arr)->arr[(idx_1 = (uintType)(o_2727_less_idx)-(uintType)((*o_2723_arr)->min_position),idxChk(idx_1 >= (uintType)((*o_2723_arr)->max_position) - (uintType)((*o_2723_arr)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_1)].value.structValue), (structType/*t_61_pointStruct*/)((*o_2723_arr)->arr[(idx_2 = (uintType)(o_2728_greater_idx)-(uintType)((*o_2723_arr)->min_position),idxChk(idx_2 >= (uintType)((*o_2723_arr)->max_position) - (uintType)((*o_2723_arr)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_2)].value.structValue));
-/* line 31 "sortPoint.s7i" */
+/* line 31 "preparForCalcul/sortPoint.s7i" */
 }
-/* line 32 "sortPoint.s7i" */
+/* line 32 "preparForCalcul/sortPoint.s7i" */
 {
-/* line 32 "sortPoint.s7i" */
+/* line 32 "preparForCalcul/sortPoint.s7i" */
 uintType idx_1;
-/* line 32 "sortPoint.s7i" */
+/* line 32 "preparForCalcul/sortPoint.s7i" */
 cpy_61((structType/*t_61_pointStruct*/)((*o_2723_arr)->arr[(idx_1 = (uintType)(o_2728_greater_idx)-(uintType)((*o_2723_arr)->min_position),idxChk(idx_1 >= (uintType)((*o_2723_arr)->max_position) - (uintType)((*o_2723_arr)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_1)].value.structValue), (structType/*t_61_pointStruct*/)(o_2729_help));
-/* line 32 "sortPoint.s7i" */
+/* line 32 "preparForCalcul/sortPoint.s7i" */
 }
 }
-/* line 34 "sortPoint.s7i" */
+/* line 34 "preparForCalcul/sortPoint.s7i" */
 } while (!((o_2727_less_idx) >= (o_2728_greater_idx)));
-/* line 35 "sortPoint.s7i" */
+/* line 35 "preparForCalcul/sortPoint.s7i" */
 {
-/* line 35 "sortPoint.s7i" */
+/* line 35 "preparForCalcul/sortPoint.s7i" */
 uintType idx_3;
-/* line 35 "sortPoint.s7i" */
+/* line 35 "preparForCalcul/sortPoint.s7i" */
 uintType idx_4;
-/* line 35 "sortPoint.s7i" */
+/* line 35 "preparForCalcul/sortPoint.s7i" */
 cpy_61((structType/*t_61_pointStruct*/)((*o_2723_arr)->arr[(idx_3 = (uintType)(o_2725_right)-(uintType)((*o_2723_arr)->min_position),idxChk(idx_3 >= (uintType)((*o_2723_arr)->max_position) - (uintType)((*o_2723_arr)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_3)].value.structValue), (structType/*t_61_pointStruct*/)((*o_2723_arr)->arr[(idx_4 = (uintType)(o_2727_less_idx)-(uintType)((*o_2723_arr)->min_position),idxChk(idx_4 >= (uintType)((*o_2723_arr)->max_position) - (uintType)((*o_2723_arr)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_4)].value.structValue));
-/* line 35 "sortPoint.s7i" */
+/* line 35 "preparForCalcul/sortPoint.s7i" */
 }
-/* line 36 "sortPoint.s7i" */
+/* line 36 "preparForCalcul/sortPoint.s7i" */
 {
-/* line 36 "sortPoint.s7i" */
+/* line 36 "preparForCalcul/sortPoint.s7i" */
 uintType idx_3;
-/* line 36 "sortPoint.s7i" */
+/* line 36 "preparForCalcul/sortPoint.s7i" */
 cpy_61((structType/*t_61_pointStruct*/)((*o_2723_arr)->arr[(idx_3 = (uintType)(o_2727_less_idx)-(uintType)((*o_2723_arr)->min_position),idxChk(idx_3 >= (uintType)((*o_2723_arr)->max_position) - (uintType)((*o_2723_arr)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_3)].value.structValue), (structType/*t_61_pointStruct*/)(o_2726_compare_elem));
-/* line 36 "sortPoint.s7i" */
+/* line 36 "preparForCalcul/sortPoint.s7i" */
 }
-/* line 37 "sortPoint.s7i" */
+/* line 37 "preparForCalcul/sortPoint.s7i" */
 o_2722_sortPoint(o_2723_arr, o_2724_left, (ovfChk(o_2727_less_idx==(-9223372036854775807L-1L))?intRaiseError(OVERFLOW_ERROR):o_2727_less_idx - 1L));
-/* line 38 "sortPoint.s7i" */
+/* line 38 "preparForCalcul/sortPoint.s7i" */
 {
-/* line 38 "sortPoint.s7i" */
+/* line 38 "preparForCalcul/sortPoint.s7i" */
 intType sum_3;
-/* line 38 "sortPoint.s7i" */
+/* line 38 "preparForCalcul/sortPoint.s7i" */
 o_2722_sortPoint(o_2723_arr, ovfChk(__builtin_saddl_overflow(o_2727_less_idx, 1L, &sum_3))?intRaiseError(OVERFLOW_ERROR):sum_3, o_2725_right);
-/* line 38 "sortPoint.s7i" */
+/* line 38 "preparForCalcul/sortPoint.s7i" */
 }
 }
-/* line 7 "sortPoint.s7i" */
+/* line 7 "preparForCalcul/sortPoint.s7i" */
 destr_61(o_2726_compare_elem);
-/* line 7 "sortPoint.s7i" */
+/* line 7 "preparForCalcul/sortPoint.s7i" */
 destr_61(o_2729_help);
 profile[2722].depth--;
 if (profile[2722].depth == 0) {
@@ -28160,7 +28160,7 @@ if (profile[2722].depth == 0) {
 /* line 1 "no_file" */
 
 /* 1192 */
-/* line 42 "sortPoint.s7i" */
+/* line 42 "preparForCalcul/sortPoint.s7i" */
 static void/*t_2_void*/ o_2730_sortPoint (arrayType/*t_62_pointArray2*/ *const o_2731_arr)
 {
 profile[2730].count++;
@@ -28168,7 +28168,7 @@ if (profile[2730].depth == 0) {
   profile[2730].time -= timMicroSec();
 }
 profile[2730].depth++;
-/* line 44 "sortPoint.s7i" */
+/* line 44 "preparForCalcul/sortPoint.s7i" */
 o_2722_sortPoint(o_2731_arr, 1L, ((*o_2731_arr)->max_position - (*o_2731_arr)->min_position + 1));
 profile[2730].depth--;
 if (profile[2730].depth == 0) {
@@ -28178,51 +28178,51 @@ if (profile[2730].depth == 0) {
 /* line 1 "no_file" */
 
 /* 1193 */
-/* line 1 "parseData.s7i" */
+/* line 1 "preparForCalcul/parseData.s7i" */
 static void/*t_2_void*/ o_2732_parseData (const const_arrayType/*t_62_pointArray2*/ o_2733_pointData)
 {
-/* line 3 "parseData.s7i" */
+/* line 3 "preparForCalcul/parseData.s7i" */
 intType/*t_18_integer*/ o_2734_i=0L;
 profile[2732].count++;
 if (profile[2732].depth == 0) {
   profile[2732].time -= timMicroSec();
 }
 profile[2732].depth++;
-/* line 5 "parseData.s7i" */
+/* line 5 "preparForCalcul/parseData.s7i" */
 {
-/* line 5 "parseData.s7i" */
+/* line 5 "preparForCalcul/parseData.s7i" */
 intType end_1=/*no_overflow_check_sbtr*/(((o_2733_pointData)->max_position - (o_2733_pointData)->min_position + 1)) - 1L;
-/* line 5 "parseData.s7i" */
+/* line 5 "preparForCalcul/parseData.s7i" */
 for (o_2734_i=1L; o_2734_i<=end_1; (o_2734_i)++) {
-/* line 5 "parseData.s7i" */
+/* line 5 "preparForCalcul/parseData.s7i" */
 {
-/* line 6 "parseData.s7i" */
+/* line 6 "preparForCalcul/parseData.s7i" */
 uintType idx_1;
-/* line 6 "parseData.s7i" */
+/* line 6 "preparForCalcul/parseData.s7i" */
 uintType idx_2;
-/* line 6 "parseData.s7i" */
+/* line 6 "preparForCalcul/parseData.s7i" */
 intType sum_3;
-/* line 6 "parseData.s7i" */
+/* line 6 "preparForCalcul/parseData.s7i" */
 uintType idx_4;
-/* line 6 "parseData.s7i" */
+/* line 6 "preparForCalcul/parseData.s7i" */
 uintType idx_5;
-/* line 6 "parseData.s7i" */
+/* line 6 "preparForCalcul/parseData.s7i" */
 intType sum_6;
-/* line 6 "parseData.s7i" */
+/* line 6 "preparForCalcul/parseData.s7i" */
 if (((((structType)((o_2733_pointData)->arr[(idx_1 = (uintType)(o_2734_i)-(uintType)((o_2733_pointData)->min_position),idxChk(idx_1 >= (uintType)((o_2733_pointData)->max_position) - (uintType)((o_2733_pointData)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_1)].value.structValue))->stru[0].value.floatValue/*->o_0_X*/) == (((structType)((o_2733_pointData)->arr[(idx_2 = (uintType)(ovfChk(__builtin_saddl_overflow(o_2734_i, 1L, &sum_3))?intRaiseError(OVERFLOW_ERROR):sum_3)-(uintType)((o_2733_pointData)->min_position),idxChk(idx_2 >= (uintType)((o_2733_pointData)->max_position) - (uintType)((o_2733_pointData)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_2)].value.structValue))->stru[0].value.floatValue/*->o_0_X*/)) &&
-/* line 7 "parseData.s7i" */
+/* line 7 "preparForCalcul/parseData.s7i" */
 ((((structType)((o_2733_pointData)->arr[(idx_4 = (uintType)(o_2734_i)-(uintType)((o_2733_pointData)->min_position),idxChk(idx_4 >= (uintType)((o_2733_pointData)->max_position) - (uintType)((o_2733_pointData)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_4)].value.structValue))->stru[1].value.floatValue/*->o_0_Y*/) != (((structType)((o_2733_pointData)->arr[(idx_5 = (uintType)(ovfChk(__builtin_saddl_overflow(o_2734_i, 1L, &sum_6))?intRaiseError(OVERFLOW_ERROR):sum_6)-(uintType)((o_2733_pointData)->min_position),idxChk(idx_5 >= (uintType)((o_2733_pointData)->max_position) - (uintType)((o_2733_pointData)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_5)].value.structValue))->stru[1].value.floatValue/*->o_0_Y*/))) {
-/* line 8 "parseData.s7i" */
+/* line 8 "preparForCalcul/parseData.s7i" */
 o_1479_write(&str[52] /* "\t\nPARSE_DATA::POINT_DATA::EQUIVALENT\n\n" */);
-/* line 9 "parseData.s7i" */
+/* line 9 "preparForCalcul/parseData.s7i" */
 o_1038_PROGRAM();
-/* line 5 "parseData.s7i" */
+/* line 5 "preparForCalcul/parseData.s7i" */
 }
-/* line 5 "parseData.s7i" */
+/* line 5 "preparForCalcul/parseData.s7i" */
 }
-/* line 5 "parseData.s7i" */
+/* line 5 "preparForCalcul/parseData.s7i" */
 }
-/* line 5 "parseData.s7i" */
+/* line 5 "preparForCalcul/parseData.s7i" */
 }
 profile[2732].depth--;
 if (profile[2732].depth == 0) {
@@ -28232,106 +28232,106 @@ if (profile[2732].depth == 0) {
 /* line 1 "no_file" */
 
 /* 1194 */
-/* line 1 "removeDuplicate.s7i" */
+/* line 1 "preparForCalcul/removeDuplicate.s7i" */
 static void/*t_2_void*/ o_2735_removeDuplicate (arrayType/*t_62_pointArray2*/ *const o_2736_pointData)
 {
-/* line 3 "removeDuplicate.s7i" */
+/* line 3 "preparForCalcul/removeDuplicate.s7i" */
 intType/*t_18_integer*/ o_2737_i=0L;
-/* line 4 "removeDuplicate.s7i" */
+/* line 4 "preparForCalcul/removeDuplicate.s7i" */
 intType/*t_18_integer*/ o_2738_j=0L;
 profile[2735].count++;
 if (profile[2735].depth == 0) {
   profile[2735].time -= timMicroSec();
 }
 profile[2735].depth++;
-/* line 6 "removeDuplicate.s7i" */
+/* line 6 "preparForCalcul/removeDuplicate.s7i" */
 o_2737_i=1L;
-/* line 7 "removeDuplicate.s7i" */
+/* line 7 "preparForCalcul/removeDuplicate.s7i" */
 o_2738_j=/*no_overflow_check_sbtr*/(((*o_2736_pointData)->max_position - (*o_2736_pointData)->min_position + 1)) - 1L;
-/* line 8 "removeDuplicate.s7i" */
+/* line 8 "preparForCalcul/removeDuplicate.s7i" */
 while ((o_2737_i) <= (o_2738_j)) {
 {
-/* line 9 "removeDuplicate.s7i" */
+/* line 9 "preparForCalcul/removeDuplicate.s7i" */
 uintType idx_1;
-/* line 9 "removeDuplicate.s7i" */
+/* line 9 "preparForCalcul/removeDuplicate.s7i" */
 uintType idx_2;
-/* line 9 "removeDuplicate.s7i" */
+/* line 9 "preparForCalcul/removeDuplicate.s7i" */
 intType sum_3;
-/* line 9 "removeDuplicate.s7i" */
+/* line 9 "preparForCalcul/removeDuplicate.s7i" */
 uintType idx_4;
-/* line 9 "removeDuplicate.s7i" */
+/* line 9 "preparForCalcul/removeDuplicate.s7i" */
 uintType idx_5;
-/* line 9 "removeDuplicate.s7i" */
+/* line 9 "preparForCalcul/removeDuplicate.s7i" */
 intType sum_6;
-/* line 9 "removeDuplicate.s7i" */
+/* line 9 "preparForCalcul/removeDuplicate.s7i" */
 if (((((structType)((*o_2736_pointData)->arr[(idx_1 = (uintType)(o_2737_i)-(uintType)((*o_2736_pointData)->min_position),idxChk(idx_1 >= (uintType)((*o_2736_pointData)->max_position) - (uintType)((*o_2736_pointData)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_1)].value.structValue))->stru[0].value.floatValue/*->o_0_X*/) == (((structType)((*o_2736_pointData)->arr[(idx_2 = (uintType)(ovfChk(__builtin_saddl_overflow(o_2737_i, 1L, &sum_3))?intRaiseError(OVERFLOW_ERROR):sum_3)-(uintType)((*o_2736_pointData)->min_position),idxChk(idx_2 >= (uintType)((*o_2736_pointData)->max_position) - (uintType)((*o_2736_pointData)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_2)].value.structValue))->stru[0].value.floatValue/*->o_0_X*/)) &&
-/* line 10 "removeDuplicate.s7i" */
+/* line 10 "preparForCalcul/removeDuplicate.s7i" */
 ((((structType)((*o_2736_pointData)->arr[(idx_4 = (uintType)(o_2737_i)-(uintType)((*o_2736_pointData)->min_position),idxChk(idx_4 >= (uintType)((*o_2736_pointData)->max_position) - (uintType)((*o_2736_pointData)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_4)].value.structValue))->stru[1].value.floatValue/*->o_0_Y*/) == (((structType)((*o_2736_pointData)->arr[(idx_5 = (uintType)(ovfChk(__builtin_saddl_overflow(o_2737_i, 1L, &sum_6))?intRaiseError(OVERFLOW_ERROR):sum_6)-(uintType)((*o_2736_pointData)->min_position),idxChk(idx_5 >= (uintType)((*o_2736_pointData)->max_position) - (uintType)((*o_2736_pointData)->min_position) + (uintType)1) ? intRaiseError(INDEX_ERROR) : idx_5)].value.structValue))->stru[1].value.floatValue/*->o_0_Y*/))) {
-/* line 18 "removeDuplicate.s7i" */
+/* line 18 "preparForCalcul/removeDuplicate.s7i" */
 structType/*t_61_pointStruct*/ tmp_1 = (structType/*t_61_pointStruct*/)(NULL);
-/* line 12 "removeDuplicate.s7i" */
+/* line 12 "preparForCalcul/removeDuplicate.s7i" */
 {
-/* line 12 "removeDuplicate.s7i" */
+/* line 12 "preparForCalcul/removeDuplicate.s7i" */
 int fail_value;
-/* line 12 "removeDuplicate.s7i" */
+/* line 12 "preparForCalcul/removeDuplicate.s7i" */
 catch_stack_pos++;
-/* line 12 "removeDuplicate.s7i" */
+/* line 12 "preparForCalcul/removeDuplicate.s7i" */
 if (unlikely(catch_stack_pos >= max_catch_stack)) {
-/* line 12 "removeDuplicate.s7i" */
+/* line 12 "preparForCalcul/removeDuplicate.s7i" */
   resize_catch_stack();
-/* line 12 "removeDuplicate.s7i" */
+/* line 12 "preparForCalcul/removeDuplicate.s7i" */
 }
-/* line 12 "removeDuplicate.s7i" */
+/* line 12 "preparForCalcul/removeDuplicate.s7i" */
 if (likely((fail_value = do_setjmp(catch_stack[catch_stack_pos])) == 0)) {
-/* line 12 "removeDuplicate.s7i" */
+/* line 12 "preparForCalcul/removeDuplicate.s7i" */
 /*noop*//* CALLOBJECT */(tmp_1=(structType/*t_61_pointStruct*/)((structType/*t_61_pointStruct*/)(arrRemove(&(*o_2736_pointData), o_2737_i))));
 /*ignore*/
-/* line 12 "removeDuplicate.s7i" */
+/* line 12 "preparForCalcul/removeDuplicate.s7i" */
 catch_stack_pos--;
-/* line 14 "removeDuplicate.s7i" */
+/* line 14 "preparForCalcul/removeDuplicate.s7i" */
 } else {
-/* line 12 "removeDuplicate.s7i" */
+/* line 12 "preparForCalcul/removeDuplicate.s7i" */
 resetExceptionCheck();
-/* line 12 "removeDuplicate.s7i" */
+/* line 12 "preparForCalcul/removeDuplicate.s7i" */
 catch_stack_pos--;
-/* line 14 "removeDuplicate.s7i" */
+/* line 14 "preparForCalcul/removeDuplicate.s7i" */
 if (o_17_INDEX_ERROR == fail_value) {
-/* line 15 "removeDuplicate.s7i" */
+/* line 15 "preparForCalcul/removeDuplicate.s7i" */
 o_1479_write(&str[53] /* "\t\nREMOVE_DUPLICATE::REMOVE::INDEX_ERROR\n\n" */);
-/* line 16 "removeDuplicate.s7i" */
+/* line 16 "preparForCalcul/removeDuplicate.s7i" */
 o_1038_PROGRAM();
-/* line 17 "removeDuplicate.s7i" */
+/* line 17 "preparForCalcul/removeDuplicate.s7i" */
 } else {
-/* line 17 "removeDuplicate.s7i" */
+/* line 17 "preparForCalcul/removeDuplicate.s7i" */
   rtlRaiseError(fail_value, error_file, error_line);
-/* line 17 "removeDuplicate.s7i" */
+/* line 17 "preparForCalcul/removeDuplicate.s7i" */
 }
-/* line 17 "removeDuplicate.s7i" */
+/* line 17 "preparForCalcul/removeDuplicate.s7i" */
 }
-/* line 17 "removeDuplicate.s7i" */
+/* line 17 "preparForCalcul/removeDuplicate.s7i" */
 }
-/* line 18 "removeDuplicate.s7i" */
+/* line 18 "preparForCalcul/removeDuplicate.s7i" */
 if (ovfChk((o_2738_j)==(-9223372036854775807L-1L))) {
-/* line 18 "removeDuplicate.s7i" */
+/* line 18 "preparForCalcul/removeDuplicate.s7i" */
 raiseError(OVERFLOW_ERROR);
-/* line 18 "removeDuplicate.s7i" */
+/* line 18 "preparForCalcul/removeDuplicate.s7i" */
 } else {
-/* line 18 "removeDuplicate.s7i" */
+/* line 18 "preparForCalcul/removeDuplicate.s7i" */
 (o_2738_j)-=1L;
-/* line 18 "removeDuplicate.s7i" */
+/* line 18 "preparForCalcul/removeDuplicate.s7i" */
 }
-/* line 18 "removeDuplicate.s7i" */
+/* line 18 "preparForCalcul/removeDuplicate.s7i" */
 destr_61(tmp_1);
 } else {
-/* line 20 "removeDuplicate.s7i" */
+/* line 20 "preparForCalcul/removeDuplicate.s7i" */
 if (ovfChk((o_2737_i)==9223372036854775807L)) {
-/* line 20 "removeDuplicate.s7i" */
+/* line 20 "preparForCalcul/removeDuplicate.s7i" */
 raiseError(OVERFLOW_ERROR);
-/* line 20 "removeDuplicate.s7i" */
+/* line 20 "preparForCalcul/removeDuplicate.s7i" */
 } else {
-/* line 20 "removeDuplicate.s7i" */
+/* line 20 "preparForCalcul/removeDuplicate.s7i" */
 (o_2737_i)+=1L;
-/* line 20 "removeDuplicate.s7i" */
+/* line 20 "preparForCalcul/removeDuplicate.s7i" */
 }
 }
 }
@@ -30773,12 +30773,12 @@ static void initProfile (void)
     profile[2706].file = "/home/username/seed7/lib/osfiles.s7i";    profile[2706].line = 1073;    profile[2706].name = "makeDir";
     profile[2709].file = "/home/username/seed7/lib/osfiles.s7i";    profile[2709].line = 1078;    profile[2709].name = "getcwd";
     profile[2711].file = "/home/username/seed7/lib/osfiles.s7i";    profile[2711].line = 1081;    profile[2711].name = "chdir";
-    profile[2714].file = "parseArgv.s7i";    profile[2714].line = 3;    profile[2714].name = "parseArgv";
-    profile[2716].file = "getDataFromFile.s7i";    profile[2716].line = 1;    profile[2716].name = "getDataFromFile";
-    profile[2722].file = "sortPoint.s7i";    profile[2722].line = 7;    profile[2722].name = "sortPoint";
-    profile[2730].file = "sortPoint.s7i";    profile[2730].line = 42;    profile[2730].name = "sortPoint";
-    profile[2732].file = "parseData.s7i";    profile[2732].line = 1;    profile[2732].name = "parseData";
-    profile[2735].file = "removeDuplicate.s7i";    profile[2735].line = 1;    profile[2735].name = "removeDuplicate";
+    profile[2714].file = "preparForCalcul/parseArgv.s7i";    profile[2714].line = 3;    profile[2714].name = "parseArgv";
+    profile[2716].file = "preparForCalcul/getDataFromFile.s7i";    profile[2716].line = 1;    profile[2716].name = "getDataFromFile";
+    profile[2722].file = "preparForCalcul/sortPoint.s7i";    profile[2722].line = 7;    profile[2722].name = "sortPoint";
+    profile[2730].file = "preparForCalcul/sortPoint.s7i";    profile[2730].line = 42;    profile[2730].name = "sortPoint";
+    profile[2732].file = "preparForCalcul/parseData.s7i";    profile[2732].line = 1;    profile[2732].name = "parseData";
+    profile[2735].file = "preparForCalcul/removeDuplicate.s7i";    profile[2735].line = 1;    profile[2735].name = "removeDuplicate";
   }
 }
 
