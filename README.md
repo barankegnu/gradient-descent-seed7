@@ -18,7 +18,7 @@ You can use scripts:
 	b) Debug - "s7c_dbg.sh".
 
 If you don't want to build and compile Seed7 project,
-you can use debug-bin "grad_desc" in bin/ (gcc/x86-64).
+you can use debug-bin "gradDescSeed7" in bin/ (gcc/x86-64).
 (Maybe you'll need to use "chmod +x")
 
 ## Version 0.1
